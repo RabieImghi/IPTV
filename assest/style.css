@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Kenia&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    height: 120px;
+    z-index: 1000;
+    transition: background-color 0.5s ease;
+}
+header.scrolled {
+    background-color: #ffffff;
+    box-shadow: 1px 1px 10px lightgray;    
+}
+header.scrolled a{
+    color: #323232;
+}
+header .header_logo img{
+    width: 150px;
+}
+header .header_nav nav ul li{
+    list-style: none;
+}
+header .header_nav nav ul {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    padding-top: 15px;
+}
+header a{
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: large;
+}
+header .header_register{
+    display: flex;
+    gap: 30px;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+
+
+.image_info button{
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    background-color: yellow;
+}
+.image_info button:nth-child(1){
+    background-color: red;
+    color: white;
+}
+.image_info button:hover{
+    background: white;
+    color: black;
+    transition: 0.5s;
+}
+@keyframes animtext {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.image_info{
+    animation: animtext 5s;
+}
+.image_info p{
+    width: 50%;
+}
+.image_info h1{
+    font-weight: bold;
+    font-size: 5rem;
+}
+.image_info h1:nth-child(1){
+    color: yellow;
+}
+.image_info{
+    position: relative;
+    color: white;
+    bottom: 900px;
+    margin: 0 200px;
+    z-index: 10;
+}
+.carousel-item::after{
+    content: " ";
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.777)
+}
+.carousel-item{
+    height: 100vh;
+    overflow: hidden;
+}
+@keyframes zomin {
+    0%{transform:scale(1);}
+    100%{transform:scale(2);}
+}
+.carousel-item img{
+    animation: zomin infinite 15s;
+}
+.carousel{
+    position: absolute;
+    top: -120px;
+    inset: 0;
+}
+section{
+    margin-top: 100vh;
+}
